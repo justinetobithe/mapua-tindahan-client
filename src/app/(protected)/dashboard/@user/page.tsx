@@ -73,7 +73,7 @@ const Page = () => {
                         data?.data?.map((item) => {
                             const firstFile = item.file_uploads?.[0];
                             const imageUrl = firstFile
-                                ? `${process.env.NEXT_PUBLIC_API_URL || ''}/storage/${firstFile.path}`
+                                ? `${process.env.NEXT_PUBLIC_API_URL || ''}/storage/app/public/${firstFile.path}`
                                 : NoImage.src;
 
                             return (

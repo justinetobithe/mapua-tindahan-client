@@ -184,7 +184,7 @@ const ProfileForm: FC<{ user: User }> = ({ user }) => {
     useEffect(() => {
         console.log("User data:", user);
         if (user && user.image) {
-            setImage(`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/image/${user?.image}`);
+            setImage(`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/app/public/image/${user?.image}`);
         } else {
             setImage('');
         }
@@ -210,7 +210,7 @@ const ProfileForm: FC<{ user: User }> = ({ user }) => {
                                         />
                                     ) : (
                                         <AvatarImage
-                                            src={`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/image/${user?.image}`}
+                                            src={`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/app/public/image/${user?.image}`}
                                             alt={"User Image"}
                                             className='object-cover'
                                         />

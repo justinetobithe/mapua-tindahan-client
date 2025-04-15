@@ -371,7 +371,7 @@ const AppPostForm: FC<AppPostFormProps> = ({ data, isOpen, onClose, queryClient 
                                     {currentFiles.map((file, index) => (
                                         <div key={`current-${file.id}`} className="relative w-20 h-20">
                                             <img
-                                                src={`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/${file.path}`}
+                                                src={`${process.env.NEXT_PUBLIC_API_URL || ''}/storage/app/public/${file.path}`}
                                                 alt={file.filename}
                                                 className="w-full h-full object-cover rounded-md"
                                             />

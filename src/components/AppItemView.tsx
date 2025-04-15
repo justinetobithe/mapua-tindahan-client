@@ -27,7 +27,7 @@ const AppItemView: FC<AppItemViewProps> = ({ data, isOpen, onClose, queryClient 
         }
     };
 
-    const images = data?.file_uploads?.map((file) => `${process.env.NEXT_PUBLIC_API_URL || ''}/storage/${file.path}`) || [];
+    const images = data?.file_uploads?.map((file) => `${process.env.NEXT_PUBLIC_API_URL || ''}/storage/app/public/${file.path}`) || [];
 
     return (
         <AlertDialog open={isOpen} onOpenChange={onClose}>
